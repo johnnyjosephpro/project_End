@@ -21,12 +21,12 @@ def open_window2():
     titre4= Label(window2, text="Date de naissance:",font=("Open Sans", 13), bg="#4065A4", fg="WHITE").place(x=20, y=140)
     titre5= Label(window2, text="Lieu de naissance:",font=("Open Sans", 13), bg="#4065A4", fg="WHITE").place(x=20, y=170)
     titre6= Label(window2, text="Adresse:",font=("Open Sans", 13), bg="#4065A4", fg="WHITE").place(x=20, y=200)
-    # titre7= Label(frame1, text="Email:",font=("Open Sans", 13), bg="#4065A4", fg="WHITE").pack()
-    # titre8= Label(frame1, text="Telephone:",font=("Open Sans", 13), bg="#4065A4", fg="WHITE").pack()
+    titre7= Label(window2, text="Email:",font=("Open Sans", 13), bg="#4065A4", fg="WHITE").place(x=20, y=280)
+    titre8= Label(window2, text="Telephone:",font=("Open Sans", 13), bg="#4065A4", fg="WHITE").place(x=20, y=310)
 
     # Buttons
-    # button_quit = Button(child, text="QUITTER", height="1", width="7", font=("Open Sans", 15), bg="WHITE", fg="#44749D", command=child.destroy).grid()
-    # button_save = Button(child, text="SAVE", height="1", width="7", font=("Open Sans", 15), bg="WHITE", fg="#44749D").grid()
+    button_quit = Button(window2, text="QUITTER", height="1", width="7", font=("Open Sans", 13), bg="WHITE", fg="#44749D", command=window2.destroy).place(x=580, y=340)
+    button_save = Button(window2, text="SAVE", height="1", width="7", font=("Open Sans", 13), bg="WHITE", fg="#44749D").place(x=480, y=340)
     
     
     
