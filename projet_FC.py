@@ -1,6 +1,7 @@
 from tkinter import *
 import mysql.connector
 
+# Function create Database and create a Table
 def create_database():
     mydb = mysql.connector.connect(
         host="localhost",
@@ -14,6 +15,7 @@ def create_database():
     print("Data Base create")
     mydb.commit()
 
+#Function Enregistrement
 def enregistrer():
 
     return
