@@ -16,9 +16,9 @@ def create_database():
     mydb.commit()
 
 #Function Enregistrement
-def enregistrer():
+# def enregistrer():
 
-    return
+#     return
 
 
 # Function Child Window
@@ -30,7 +30,6 @@ def open_window2():
     window2.geometry("700x450")
     window2.resizable(width=False, height=False)
     window2.config(bg='#3b3b3b')
-
 
     # Title
     titre = Label(window2, text="GESTION DES EMPLOYES", font=("Century Gothic Bold", 20), bg="#3b3b3b", fg="#FFCD00").place(x=200, y=10)
@@ -44,19 +43,21 @@ def open_window2():
     titre8= Label(window2, text="Email",font=("Century Gothic", 13), bg="#3b3b3b", fg="WHITE").place(x=30, y=290)
     titre9= Label(window2, text="Telephone",font=("Century Gothic", 13), bg="#3b3b3b", fg="WHITE").place(x=350, y=290)
     
-    def sel():
-        selection = str(sexe.get())
-    # Entry
+    # def sel():
+    #     selection = str(sexe.get())
+    # return
+
+    # Entry of Windows2
     entrer1= Entry(window2, width="15")
     entrer1.place(x=35, y=80)
     entrer2= Entry(window2, width="30")
     entrer2.place(x=35, y=140)
     entrer3= Entry(window2, width="30")
     entrer3.place(x=355, y=140)
-    sexe = IntVar()
-    rbutton1= Radiobutton(window2, text="Masculin",variable=sexe,value=1, command=sel, font=("Century Gothic", 12), fg="WHITE", bg="#3b3b3b")
+    
+    rbutton1= Radiobutton(window2, text="Masculin",value=1, font=("Century Gothic", 12), fg="WHITE", bg="#3b3b3b")
     rbutton1.place(x=35, y=195)
-    rbutton2= Radiobutton(window2, text="Feminin",variable=sexe, value=2, command=sel, font=("Century Gothic", 12),fg="WHITE", bg="#3b3b3b")
+    rbutton2= Radiobutton(window2, text="Feminin", value=2, font=("Century Gothic", 12),fg="WHITE", bg="#3b3b3b")
     rbutton2.place(x=140, y=195)
     entrer4= Entry(window2, width="30")
     entrer4.place(x=355, y=200)
