@@ -14,7 +14,7 @@ def create_database():
     mycursor.execute("")
     print("Data Base create")
     mydb.commit()
-
+    
 #Function Enregistrement
 # def enregistrer():
 
@@ -30,6 +30,7 @@ def open_window2():
     window2.geometry("700x450")
     window2.resizable(width=False, height=False)
     window2.config(bg='#3b3b3b')
+    window2.wm_iconbitmap('icon.ico')
 
     # Title
     titre = Label(window2, text="GESTION DES EMPLOYES", font=("Century Gothic Bold", 20), bg="#3b3b3b", fg="#FFCD00").place(x=200, y=10)
@@ -98,6 +99,7 @@ window1.title('Syteme de Gestion des employes')
 window1.geometry("700x350")
 window1.resizable(width=False, height=False)
 window1.config(background='#3b3b3b')
+window1.wm_iconbitmap('icon.ico')
 
 # Create titles for Main Window
 title = Label(window1, text="PROJET DE FIN DE SESSION", font=("Century Gothic bold", 22), bg="#3b3b3b", fg="#FFCD00").place(x=170, y=10)
