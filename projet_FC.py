@@ -27,7 +27,6 @@ def create_database():
 def open_window2():
     # Second window
     window2 = Tk()
-
     window2.title('GESTION DES EMPLOYES')
     window2.geometry("730x450")
     window2.resizable(width=False, height=False)
@@ -35,7 +34,7 @@ def open_window2():
     window2.wm_iconbitmap('icon.ico')
 
     # Frame for Image
-    photo_frame = Frame(window2, width=200, height=200, bd=2, relief='ridge').place(x=500, y=140)
+    photo_frame = LabelFrame(window2, width=200, height=200, bd=2, relief='ridge').place(x=500, y=140)
     # img = PhotoImage(file="\steps-icon-1.png")
 
     # Title of child window
@@ -49,11 +48,7 @@ def open_window2():
     titre7= Label(window2, text="Adresse",font=("Century Gothic", 13), bg="#3b3b3b", fg="WHITE").place(x=290, y=230)
     titre8= Label(window2, text="Email",font=("Century Gothic", 13), bg="#3b3b3b", fg="WHITE").place(x=30, y=290)
     titre9= Label(window2, text="Telephone",font=("Century Gothic", 13), bg="#3b3b3b", fg="WHITE").place(x=290, y=290)
-    
-    def file_Dialog():
-        filename = filedialog.askopenfilename(initialdir = "/", title="Select Image", filetype = (("jpeg", "*.jpg"), ("All Files", "*.*")))
-        return
-    
+     
     
     # Entry of child window
     entrer1= Entry(window2, width="15")
@@ -86,7 +81,12 @@ def open_window2():
         entrer6.delete(first=0, last=100)
         entrer7.delete(first=0, last=100)
         entrer8.delete(first=0, last=100)
-        return
+    
+     # Function File Dialog for browser Image
+    def file_Dialog():
+        filename = filedialog.askopenfilename(
+            initialdir="/", title="Select Image", filetype=(("jpeg", "*.jpg"), ("All Files", "*.*")))
+        
 
     # Button of child window
     button_image = Button(window2, text="Parcourir", command=file_Dialog). place(x=500, y=100)
@@ -95,7 +95,6 @@ def open_window2():
     button_effacer = Button(window2, text="EFFACER", height="1", width="8", font=(
         "Century Gothic Bold", 13), bg="WHITE", fg="#44749D", command=delete_items).place(x=520, y=380)
     button_quit = Button(window2, text="QUITTER", height="1", width="7", font=("Century Gothic Bold", 13), bg="WHITE", fg="#44749D", command=window2.destroy).place(x=620, y=380)
-    return
 
     window2.mainloop()   
 
