@@ -1,5 +1,6 @@
 from tkinter import *
 import mysql.connector
+from tkinter import filedialog
 # from PIL import Image, ImageTk
 
 # Function create Database and create a Table
@@ -49,10 +50,11 @@ def open_window2():
     titre8= Label(window2, text="Email",font=("Century Gothic", 13), bg="#3b3b3b", fg="WHITE").place(x=30, y=290)
     titre9= Label(window2, text="Telephone",font=("Century Gothic", 13), bg="#3b3b3b", fg="WHITE").place(x=290, y=290)
     
-    # def sel():
-    #     selection = str(sexe.get())
-    # return
-
+    def file_Dialog():
+        filename = filedialog.askopenfilename(initialdir = "/", title="Select Image", filetype = (("jpeg", "*.jpg"), ("All Files", "*.*")))
+        return
+    
+    
     # Entry of child window
     entrer1= Entry(window2, width="15")
     entrer1.place(x=35, y=80)
@@ -87,6 +89,7 @@ def open_window2():
         return
 
     # Button of child window
+    button_image = Button(window2, text="Parcourir", command=file_Dialog). place(x=500, y=100)
     button_Enregistrer = Button(window2, text="ENREGISTRER", height="1", width="12", font=("Century Gothic Bold", 13), bg="WHITE", fg="#44749D").place(x=240, y=380)
     button_Rechercher = Button(window2, text="RECHERCHER", height="1", width="12", font=("Century Gothic Bold", 13), bg="WHITE", fg="#44749D").place(x=380, y=380)
     button_effacer = Button(window2, text="EFFACER", height="1", width="8", font=(
