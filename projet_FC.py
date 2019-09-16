@@ -28,27 +28,26 @@ def open_window2():
     window2 = Tk()
 
     window2.title('GESTION DES EMPLOYES')
-    window2.geometry("720x450")
+    window2.geometry("730x450")
     window2.resizable(width=False, height=False)
     window2.config(bg='#3b3b3b')
     window2.wm_iconbitmap('icon.ico')
 
     # Frame for Image
-    photo_frame = Frame(window2, width=200, height=200, bd=3, relief='ridge').place(x=500, y=150)
+    photo_frame = Frame(window2, width=200, height=200, bd=2, relief='ridge').place(x=500, y=140)
     # img = PhotoImage(file="\steps-icon-1.png")
-    # imgplace = Label(window2, image=img).pack()
 
     # Title of child window
     titre = Label(window2, text="GESTION DES EMPLOYES", font=("Century Gothic Bold", 20), bg="#3b3b3b", fg="#FFCD00").place(x=200, y=10)
     titre1= Label(window2, text="ID Employe",font=("Century Gothic", 13), bg="#3b3b3b", fg="WHITE").place(x=30, y=50)
     titre2= Label(window2, text="Nom",font=("Century Gothic", 13), bg="#3b3b3b", fg="WHITE").place(x=30, y=110)
-    titre3= Label(window2, text="Prenom",font=("Century Gothic", 13), bg="#3b3b3b", fg="WHITE").place(x=300, y=110)
+    titre3= Label(window2, text="Prenom",font=("Century Gothic", 13), bg="#3b3b3b", fg="WHITE").place(x=290, y=110)
     titre4= Label(window2, text="Sexe",font=("Century Gothic", 13), bg="#3b3b3b", fg="WHITE").place(x=30, y=170)
-    titre5= Label(window2, text="Date de naissance",font=("Century Gothic", 13), bg="#3b3b3b", fg="WHITE").place(x=300, y=170)
+    titre5= Label(window2, text="Date de naissance",font=("Century Gothic", 13), bg="#3b3b3b", fg="WHITE").place(x=290, y=170)
     titre6= Label(window2, text="Lieu de naissance",font=("Century Gothic", 13), bg="#3b3b3b", fg="WHITE").place(x=30, y=230)
-    titre7= Label(window2, text="Adresse",font=("Century Gothic", 13), bg="#3b3b3b", fg="WHITE").place(x=300, y=230)
+    titre7= Label(window2, text="Adresse",font=("Century Gothic", 13), bg="#3b3b3b", fg="WHITE").place(x=290, y=230)
     titre8= Label(window2, text="Email",font=("Century Gothic", 13), bg="#3b3b3b", fg="WHITE").place(x=30, y=290)
-    titre9= Label(window2, text="Telephone",font=("Century Gothic", 13), bg="#3b3b3b", fg="WHITE").place(x=300, y=290)
+    titre9= Label(window2, text="Telephone",font=("Century Gothic", 13), bg="#3b3b3b", fg="WHITE").place(x=290, y=290)
     
     # def sel():
     #     selection = str(sexe.get())
@@ -60,21 +59,21 @@ def open_window2():
     entrer2= Entry(window2, width="30")
     entrer2.place(x=35, y=140)
     entrer3= Entry(window2, width="30")
-    entrer3.place(x=305, y=140)
+    entrer3.place(x=295, y=140)
     rbutton1= Radiobutton(window2, text="Masculin",value=1, font=("Century Gothic", 12), fg="WHITE", bg="#3b3b3b")
     rbutton1.place(x=35, y=195)
     rbutton2= Radiobutton(window2, text="Feminin", value=2, font=("Century Gothic", 12),fg="WHITE", bg="#3b3b3b")
     rbutton2.place(x=140, y=195)
     entrer4= Entry(window2, width="30")
-    entrer4.place(x=305, y=200)
+    entrer4.place(x=295, y=200)
     entrer5= Entry(window2, width="30")
     entrer5.place(x=35, y=260)
     entrer6= Entry(window2, width="30")
-    entrer6.place(x=305, y=260)
+    entrer6.place(x=295, y=260)
     entrer7= Entry(window2, width="30")
     entrer7.place(x=35, y=320)
     entrer8= Entry(window2, width="30")
-    entrer8.place(x=305, y=320)
+    entrer8.place(x=295, y=320)
 
     def delete_items():
         entrer1.delete(first=0, last=100)
@@ -88,10 +87,11 @@ def open_window2():
         return
 
     # Button of child window
-    button_quit = Button(window2, text="QUITTER", height="1", width="7", font=("Century Gothic Bold", 13), bg="WHITE", fg="#44749D", command=window2.destroy).place(x=600, y=380)
-    button_effacer = Button(window2, text="EFFACER", height="1", width="8", font=("Century Gothic Bold", 13), bg="WHITE", fg="#44749D", command=delete_items).place(x=500, y=380)
-    button_Rechercher = Button(window2, text="RECHERCHER", height="1", width="12", font=("Century Gothic Bold", 13), bg="WHITE", fg="#44749D").place(x=360, y=380)
-    button_Enregistrer = Button(window2, text="ENREGISTRER", height="1", width="12", font=("Century Gothic Bold", 13), bg="WHITE", fg="#44749D").place(x=220, y=380)
+    button_Enregistrer = Button(window2, text="ENREGISTRER", height="1", width="12", font=("Century Gothic Bold", 13), bg="WHITE", fg="#44749D").place(x=240, y=380)
+    button_Rechercher = Button(window2, text="RECHERCHER", height="1", width="12", font=("Century Gothic Bold", 13), bg="WHITE", fg="#44749D").place(x=380, y=380)
+    button_effacer = Button(window2, text="EFFACER", height="1", width="8", font=(
+        "Century Gothic Bold", 13), bg="WHITE", fg="#44749D", command=delete_items).place(x=520, y=380)
+    button_quit = Button(window2, text="QUITTER", height="1", width="7", font=("Century Gothic Bold", 13), bg="WHITE", fg="#44749D", command=window2.destroy).place(x=620, y=380)
     return
 
     window2.mainloop()   
