@@ -2,19 +2,27 @@ from tkinter import *
 import mysql.connector
 import tkinter as tk
 from tkinter import filedialog
+import sqlite3
 # from PIL import Image, ImageTk
 
-# Function create Database and create a Table
-def connectiondb():
+# db = sqlite3.connect('projet_db')
+# cursor = db.cursor()
+# cursor.execute("CREATE TABLE IF NOT EXISTS people(id INTEGER PRIMARY KEY, name TEXT, phone TEXT)")
+# db.commit()
+# db.close()
+
+# Create Database
+class connectiondb():
     mdb = mysql.connector.connect(
         host="localhost",
         user="root",
-        passwd=""
+        passwd="",
+        database="project_db"
     )
-    requete1 = "CREATE DATABASE project_db"
-    requete2 = "CREATE TABLE employe (ID int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,nom varchar(20) NOT NULL,prenom varchar(20) NOT NULL,date_naissance date,lieu_naissance varchar(20),adresse varchar(50),email varchar(20),telephone varchar(15))"
+    requete1 = "CREATE DATABASE IF NOT EXISTS project_db"
+    # requete2 = "CREATE TABLE IF NOT EXISTS employe (ID int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,nom varchar(20) NOT NULL,prenom varchar(20) NOT NULL,date_naissance date,lieu_naissance varchar(20),adresse varchar(50),email varchar(20),telephone varchar(15))"
     mycursor = mdb.cursor()
-    mycursor.execute("Create DataBase project_db")
+    mycursor.execute(requete1)
     mdb.commit()
     mdb.close()
 
